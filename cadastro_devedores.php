@@ -22,31 +22,31 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4">
-                            Nome:<br /><input type="text" name="nome" placeholder="Nome">
+                            Nome:<br /><input type="text" name="nome" placeholder="Nome" required="required">
                         </div>
                         <div class="col-lg-4" align="center">
-                            CPF / CNPJ:<br /><input type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder="CPF/CNPJ" maxlength="18" onblur="mask()">
+                            CPF / CNPJ:<br /><input type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder="CPF/CNPJ" maxlength="18" onblur="mask()" required="required">
                         </div>
                         <div class="col-lg-4" align="right">
-                            Data de Nascimento:<br /><input type="date" name="data_nascimento" placeholder="Data de nascimento">
+                            Data de Nascimento:<br /><input type="date" name="data_nascimento" placeholder="Data de nascimento" required="required">
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-lg-4">
-                            Endereço:<br /><input type="text" name="endereco" placeholder="Endereço">
+                            Endereço:<br /><input type="text" name="endereco" placeholder="Endereço" required="required">
                         </div>
                         <div class="col-lg-4" align="center">
-                            Descrição do título:<br /><input type="text" name="descricao_titulo" placeholder="Descrição do Título">
+                            Descrição do título:<br /><input type="text" name="descricao_titulo" placeholder="Descrição do Título" required="required">
                         </div>
                         <div class="col-lg-4" align="right">
-                            Valor: <br /><input type="text" name="valor" placeholder="Valor">
+                            Valor: <br /><input type="text" name="valor" placeholder="Valor" required="required">
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-lg-12" align="center">
-                            Data de vencimento:<br /><input type="date" name="data_vencimento" placeholder="Data de vencimento">
+                            Data de vencimento:<br /><input type="date" name="data_vencimento" placeholder="Data de vencimento" required="required">
                         </div>
                     </div>
                 </div>

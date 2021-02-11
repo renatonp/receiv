@@ -27,31 +27,31 @@ $devedores = $devedor->edicaoDevedor($_GET['id']);
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4">
-                            Nome:<br /><input type="text" name="nome" placeholder="Nome" value="<?= $devedores["Nome"] ?>">
+                            Nome:<br /><input type="text" name="nome" placeholder="Nome" value="<?= $devedores["Nome"] ?>" required="required">
                         </div>
                         <div class="col-lg-4" align="center">
-                            CPF / CNPJ:<br /><input type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder="CPF/CNPJ" value="<?= $devedores["cpf_cnpj"] ?>" maxlength="18" onblur="mask()">
+                            CPF / CNPJ:<br /><input type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder="CPF/CNPJ" value="<?= $devedores["cpf_cnpj"] ?>" maxlength="18" onblur="mask()" required="required">
                         </div>
                         <div class="col-lg-4" align="right">
-                            Data de nascimento:<br /><input type="date" name="data_nascimento" placeholder="Data de nascimento" value="<?= $devedores["data_nascimento"] ?>">
+                            Data de nascimento:<br /><input type="date" name="data_nascimento" placeholder="Data de nascimento" value="<?= $devedores["data_nascimento"] ?>" required="required">
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-lg-4">
-                            Endereço:<br /><input type="text" name="endereco" placeholder="Endereço" value="<?= $devedores["endereco"] ?>">
+                            Endereço:<br /><input type="text" name="endereco" placeholder="Endereço" value="<?= $devedores["endereco"] ?>" required="required">
                         </div>
                         <div class="col-lg-4" align="center">
-                            Descrição de Título:<br /><input type="text" name="descricao_titulo" placeholder="Descrição do Título" value="<?= $devedores["descricao_titulo"] ?>">
+                            Descrição de Título:<br /><input type="text" name="descricao_titulo" placeholder="Descrição do Título" value="<?= $devedores["descricao_titulo"] ?>" required="required">
                         </div>
                         <div class="col-lg-4" align="right">
-                            Valor:<br /><input type="text" name="valor" placeholder="Valor" value="<?= $devedores["valor"] ?>">
+                            Valor:<br /><input type="text" name="valor" placeholder="Valor" value="<?= $devedores["valor"] ?>" required="required">
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-lg-12" align="center">
-                            Data de vencimento:<br /><input type="date" name="data_vencimento" placeholder="Data de vencimento" value="<?= $devedores["data_vencimento"] ?>">
+                            Data de vencimento:<br /><input type="date" name="data_vencimento" placeholder="Data de vencimento" value="<?= $devedores["data_vencimento"] ?>" required="required">
                         </div>
                     </div>
                 </div>
