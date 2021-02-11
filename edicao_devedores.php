@@ -18,7 +18,7 @@ $devedores = $devedor->edicaoDevedor($_GET['id']);
         </button>
     </div>
     <div class="row col-lg-8" id="titulo_tela_cadastro">
-        <span id="texto_titulo_tela"><h3>Cadastro de Devedores</h3></span>
+        <span id="texto_titulo_tela"><h3>Alteração de Devedores</h3></span>
     </div>
 
     <div class="container-fluid col-lg-9">
