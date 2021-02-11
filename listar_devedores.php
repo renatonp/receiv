@@ -47,9 +47,9 @@ $devedores = $devedor->listarDevedores();
                                         <td><?= $devedor["valor"] ?></td>
                                         <td><?= date('d/m/Y', strtotime($devedor["data_vencimento"])) ?></td>
                                         <td>
-                                            <a href="editar_devedor.php?id=<?= $devedor["id"] ?>"><font color="#32CD32"><i class="far fa-edit"></i></font></a>
+                                            <a href="edicao_devedores.php?id=<?= $devedor["id"] ?>"><font color="#32CD32"><i class="far fa-edit"></i></font></a>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <a href="deletar_devedor.php?id=<?= $devedor["id"] ?>"><font color="#32CD32"><i class="far fa-trash-alt"></i></a></font>
+                                            <a href="#" onclick="confirmaRemocao(<?= $devedor['id'] ?>)"><font color="#32CD32"><i class="far fa-trash-alt"></i></a></font>
                                         </td>
                                     </tr>
                                 <?php
@@ -58,6 +58,26 @@ $devedores = $devedor->listarDevedores();
                             </tbody>
                         </table>
                     </div>
+                    <?php
+                    if(isset($_POST['msg'])){
+                        echo"<br /><div class='alert alert-success' align='center'>".$_POST['msg']."</div><br />";
+                    }
+                    ?>
+                    <div id="msg_remocao" align="center"><font face="Verdana">Tem certeza que deseja deletar este registro ?</font>&nbsp;&nbsp;&nbsp;<a href="#" id="link_remocao_sim"><font size=4 color="#32CD32"><i class="fas fa-check-circle"></i></font></a>&nbsp;&nbsp;&nbsp;<a href="#" id="link_remocao_nao"><font size=4 color="#DF2846"><i class="fas fa-times-circle"></i></font></a></div>
             </div>
         </div>
     </div>
+    <script>
+    $(document).ready(function (){
+        $('#msg_remocao').hide();
+        $('#link_remocao_nao').click(function(){
+            $('#msg_remocao').hide();
+            $('#link_remocao_sim').attr("href","#");
+        })
+    });
+
+    function confirmaRemocao(id){
+        $('#msg_remocao').show();
+        $('#link_remocao_sim').attr("href","deletar_devedores.php?id="+id);
+    }
+    </script>

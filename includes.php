@@ -55,8 +55,19 @@
     }
 </style>
 
+<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('.dataTable').DataTable();
+        $('.dataTable').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
+            },
+            "bLengthChange": false,
+            "ordering": false,
+            "info": false,
+            "pageLength": 5,
+            "scrollY": 280,
+            "searching": true,
+        });
     });
     </script>
